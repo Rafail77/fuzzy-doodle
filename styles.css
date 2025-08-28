@@ -1,0 +1,15 @@
+.button:hover {
+  background: #0056b3; /* Станет темнее при наведении */
+}
+
+.button:active {
+  background: #003d80; /* Ещё темнее при нажатии */
+}
+
+.button1:hover {
+  background: #218838; /* Зелёная кнопка станет темнее */
+}
+
+.button1:active {
+  background: #1e7e34; /* Ещё темнее при клике */
+}
