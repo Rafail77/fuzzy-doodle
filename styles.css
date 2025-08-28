@@ -17,7 +17,7 @@ body {
 }
 
 /* ===== Общие стили кнопок ===== */
-.button, .button1 {
+.button, .button1, .button2 {
   width: 200px;                  /* Фиксированная ширина */
   padding: 12px;                 /* Внутренние отступы */
   font-size: 16px;               /* Размер текста */
@@ -49,4 +49,16 @@ body {
 }
 .button1:active {
   background: #1e7e34;           /* Фон ещё темнее при клике */
+}
+
+/* ===== Красная кнопка ===== */
+.button2 {
+  background: #dc3545;           /* Красный фон */
+  color: white;                  /* Белый текст */
+}
+.button2:hover {
+  background: #c82333;           /* Фон темнее при наведении */
+}
+.button2:active {
+  background: #a71d2a;           /* Фон ещё темнее при клике */
 }

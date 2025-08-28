@@ -1,0 +1,18 @@
+// ===== Функция для синей кнопки =====
+function openGoogle() {                             // Определяем функцию openGoogle
+  window.open("https://www.google.com", "_blank");  // Открываем Google в новой вкладке
+}
+
+// ===== Функция для зелёной кнопки =====
+function changeBackground() {                       // Определяем функцию changeBackground
+  const colors = ["#f4f4f4", "#ffcccc", "#ccffcc", "#ccccff", "#ffffcc"]; // Массив возможных цветов
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];  // Выбираем случайный цвет
+  document.body.style.background = randomColor;     // Применяем выбранный цвет как фон страницы
+}
+
+// ===== Функция для красной кнопки =====
+function showTime() {                               // Определяем функцию showTime
+  const now = new Date();                           // Получаем текущее время
+  const timeString = now.toLocaleTimeString();      // Переводим его в строку (формат ЧЧ:ММ:СС)
+  alert("Текущее время: " + timeString);            // Показываем время через alert
+}
