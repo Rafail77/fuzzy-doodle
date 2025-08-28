@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Указываем, что документ написан в HTML5 -->
+<html lang="en"> <!-- Начало HTML-документа, язык содержимого = английский -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test CSS</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Подключаем CSS -->
+  <meta charset="UTF-8"> <!-- Кодировка UTF-8 (поддержка кириллицы и всех символов) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Масштабирование под мобильные устройства -->
+  <title>Активные кнопки</title> <!-- Заголовок страницы -->
+  <link rel="stylesheet" href="styles.css"> <!-- Подключаем внешний CSS-файл -->
 </head>
-<body>
+<body> <!-- Основное содержимое страницы -->
 
-<button class="button" onclick="alert('Вы нажали синюю кнопку!')">Click me</button>
-<button class="button1" onclick="alert('Вы нажали зелёную кнопку!')">Click me</button>
+  <!-- Контейнер с кнопками -->
+  <div class="controls"> <!-- Контейнер, чтобы разместить кнопки по центру -->
+    <button class="button" onclick="alert('Вы нажали синюю кнопку!')">Click me</button> <!-- Синяя кнопка + реакция -->
+    <button class="button1" onclick="alert('Вы нажали зелёную кнопку!')">Click me</button> <!-- Зелёная кнопка + реакция -->
+  </div>
 
+  <!-- Подключение JS внизу страницы (обычно так делают для скорости загрузки) -->
+  <script>
+    // Здесь можно писать JavaScript-код для кнопок
+    // Сейчас кнопки используют атрибут onclick прямо внутри HTML
+    // Можно назначать действия и через JS, если необходимо
+  </script>
 </body>
 </html>
