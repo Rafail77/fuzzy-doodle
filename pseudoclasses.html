@@ -1,24 +1,36 @@
 <!DOCTYPE html> <!-- Указываем, что документ написан в HTML5 -->
 <html lang="en"> <!-- Начало HTML-документа, язык содержимого = английский -->
 <head>
-  <meta charset="UTF-8"> <!-- Кодировка UTF-8 (поддержка кириллицы и всех символов) -->
+  <meta charset="UTF-8"> <!-- Кодировка UTF-8 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Масштабирование под мобильные устройства -->
-  <title>Активные кнопки</title> <!-- Заголовок страницы -->
-  <link rel="stylesheet" href="styles.css"> <!-- Подключаем внешний CSS-файл -->
+  <title>Активные кнопки</title> <!-- Заголовок вкладки браузера -->
+  <link rel="stylesheet" href="styles.css"> <!-- Подключаем CSS-файл -->
+  
 </head>
 <body> <!-- Основное содержимое страницы -->
+    
 
   <!-- Контейнер с кнопками -->
-  <div class="controls"> <!-- Контейнер, чтобы разместить кнопки по центру -->
-    <button class="button" onclick="alert('Вы нажали синюю кнопку!')">Click me</button> <!-- Синяя кнопка + реакция -->
-    <button class="button1" onclick="alert('Вы нажали зелёную кнопку!')">Click me</button> <!-- Зелёная кнопка + реакция -->
+  <div class="controls"> <!-- Flex-контейнер для центрирования -->
+    <button class="button" onclick="openGoogle()">Открыть Google</button> <!-- Кнопка вызывает функцию openGoogle() -->
+    <button class="button1" onclick="changeBackground()">Сменить фон</button> <!-- Кнопка вызывает функцию changeBackground() -->
   </div>
 
-  <!-- Подключение JS внизу страницы (обычно так делают для скорости загрузки) -->
+  <!-- Подключаем JS -->
   <script>
-    // Здесь можно писать JavaScript-код для кнопок
-    // Сейчас кнопки используют атрибут onclick прямо внутри HTML
-    // Можно назначать действия и через JS, если необходимо
+    // ===== Функция для первой кнопки =====
+    function openGoogle() {                       // Определяем функцию openGoogle
+      window.open("https://www.google.com", "_blank"); // Открываем сайт Google в новой вкладке
+    }
+
+    // ===== Функция для второй кнопки =====
+    function changeBackground() {                 // Определяем функцию changeBackground
+      const colors = ["#f4f4f4", "#ffcccc", "#ccffcc", "#ccccff", "#ffffcc"]; // Массив с разными цветами
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];  // Выбираем случайный цвет
+      document.body.style.background = randomColor; // Применяем выбранный цвет к фону страницы
+    }
   </script>
+  
+
 </body>
 </html>
