@@ -62,3 +62,11 @@ body {
 .button2:active {
   background: #a71d2a;           /* Фон ещё темнее при клике */
 }
+
+/* Вывод времени */
+#time-output {
+  margin-top: 16px;              /* Отступ сверху */
+  font-size: 18px;               /* Чуть больше шрифт */
+  font-weight: bold;             /* Жирный текст */
+  color: #333;                   /* Тёмно-серый */
+}

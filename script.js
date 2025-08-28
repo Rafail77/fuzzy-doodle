@@ -14,5 +14,5 @@ function changeBackground() {                       // Определяем фу
 function showTime() {                               // Определяем функцию showTime
   const now = new Date();                           // Получаем текущее время
   const timeString = now.toLocaleTimeString();      // Переводим его в строку (формат ЧЧ:ММ:СС)
-  alert("Текущее время: " + timeString);            // Показываем время через alert
+  document.getElementById("time-output").textContent = "Текущее время: " + timeString; // Записываем в <p>
 }
