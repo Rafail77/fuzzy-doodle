@@ -31,10 +31,16 @@ function startClock() {                          // Функция запуск�
   }, 1000);                                      // Интервал = 1 секунда
 }
 
-// ===== ЖЁЛТАЯ КНОПКА =====
-function stopClock() {                           // Функция остановки часов
-  clearInterval(clockInterval);                  // Останавливаем таймер
-  clockInterval = null;                          // Сбрасываем переменную
-  document.getElementById("time-output").textContent = 
-  "The clock has stopped";                     // Сообщение пользователю
+// ===== ЖЁЛТАЯ КНОПКА (переключатель) =====
+function toggleClock() {
+  const btn = document.getElementById("toggleClockBtn"); // Получаем кнопку
+  if (clockInterval) { 
+    clearInterval(clockInterval);   // Останавливаем часы
+    clockInterval = null;           // Сбрасываем переменную
+    document.getElementById("time-output").textContent = "The clock has stopped"; 
+    btn.textContent = "Start the clock"; // Меняем текст кнопки
+  } else {
+    startClock();                   // Запускаем часы
+    btn.textContent = "Stop the clock"; // Меняем текст кнопки
+  }
 }
