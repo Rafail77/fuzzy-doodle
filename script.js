@@ -45,3 +45,9 @@ function toggleClock() {
   }
 }
 
+// ===== ФУНКЦИЯ ДЛЯ АНИМАЦИИ =====
+function animateTime(element) {
+  element.classList.remove("show-time"); // Сначала убираем класс
+  void element.offsetWidth;              // Хак: перезапускаем анимацию
+  element.classList.add("show-time");    // Добавляем снова
+}
