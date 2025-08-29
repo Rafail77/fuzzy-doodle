@@ -17,14 +17,15 @@ body {
 }
 
 /* ===== Общие стили кнопок ===== */
-.button, .button1, .button2, .button3 {
+.button, .button1, .button2, .button3, .button4 {
   width: 200px;                  /* Фиксированная ширина */
   padding: 12px;                 /* Внутренние отступы */
   font-size: 16px;               /* Размер текста */
   border: none;                  /* Без рамки */
   border-radius: 6px;            /* Скруглённые углы */
   cursor: pointer;               /* Курсор-рука при наведении */
-  transition: background 0.3s;   /* Плавное изменение фона */
+  transition: background 0.3s;   /* Плавная анимация */
+  color: white;                /* Белый текст */
 }
 
 /* ===== Синяя кнопка ===== */
@@ -72,6 +73,17 @@ body {
 }
 .button3:active { 
   background: #442174; 
+}
+
+/* Жёлтая */
+.button4 { 
+  background: #ffc107; color: black; 
+} /* У жёлтой — чёрный текст */
+.button4:hover { 
+  background: #e0a800; 
+}
+.button4:active { 
+  background: #c69500; 
 }
 
 /* Вывод времени */
