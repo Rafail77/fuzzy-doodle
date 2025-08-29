@@ -17,7 +17,7 @@ body {
 }
 
 /* ===== Общие стили кнопок ===== */
-.button, .button1, .button2 {
+.button, .button1, .button2, .button3 {
   width: 200px;                  /* Фиксированная ширина */
   padding: 12px;                 /* Внутренние отступы */
   font-size: 16px;               /* Размер текста */
@@ -61,6 +61,17 @@ body {
 }
 .button2:active {
   background: #a71d2a;           /* Фон ещё темнее при клике */
+}
+
+/* Фиолетовая кнопка */
+.button3 { 
+  background: #6f42c1; 
+}
+.button3:hover { 
+  background: #5a32a3; 
+}
+.button3:active { 
+  background: #442174; 
 }
 
 /* Вывод времени */

@@ -14,5 +14,19 @@ function changeBackground() {                       // Определяем фу
 function showTime() {                               // Определяем функцию showTime
   const now = new Date();                           // Получаем текущее время
   const timeString = now.toLocaleTimeString();      // Переводим его в строку (формат ЧЧ:ММ:СС)
-  document.getElementById("time-output").textContent = "Текущее время: " + timeString; // Записываем в <p>
+  document.getElementById("time-output").textContent = "Current time: " + timeString; // Записываем в <p>
+}
+
+// ===== ФИОЛЕТОВАЯ КНОПКА =====
+let clockInterval;                               // Переменная для хранения таймера
+
+function startClock() {                          // Функция запуска часов
+  if (clockInterval) return;                     // Если часы уже запущены — ничего не делаем
+
+  clockInterval = setInterval(() => {            // Запускаем таймер, обновляющий каждую секунду
+    const now = new Date();                      // Берём текущее время
+    const timeString = now.toLocaleTimeString(); // Формат ЧЧ:ММ:СС
+    document.getElementById("time-output").textContent = 
+      "Watch: " + timeString;                    // Выводим в <p>
+  }, 1000);                                      // Интервал = 1 секунда
 }
