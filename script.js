@@ -44,3 +44,4 @@ function toggleClock() {
     btn.textContent = "Stop the clock"; // Меняем текст кнопки
   }
 }
+
